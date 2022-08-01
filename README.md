@@ -30,7 +30,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat records computer metrics data for the machine it's on. 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function       | IP Address | Operating System |
 |----------|----------------|------------|------------------|
@@ -45,17 +44,17 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 76.146.21.219  
-Machines within the network can only be accessed by 76.146.21.219.
-- I allowed the jump-box access to the elk vm. It's IP address is 20.75.54.93
+Machines within the network can only be accessed by 10.0.0.4.
+- I allowed the jump-box access to the elk vm. It's IP address is 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump-box | Yes                 | 76.146.21.219        |
-| Elk      | No                  |                      |
-| Web-1    | No                  |                      |
-| Web-2    | No                  |                      |
+| Name     | Publicly Accessible | Allowed IP Addresses   |
+|----------|---------------------|------------------------|
+| Jump-box | Yes                 | 76.146.21.219          |
+| Elk      | No                  | 10.0.0.4, 76.146.21.219|
+| Web-1    | No                  | 10.0.0.4, 10.1.0.4     |
+| Web-2    | No                  | 10.0.0.4, 10.1.0.4     |
 
 ### Elk Configuration
 
